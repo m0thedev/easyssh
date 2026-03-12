@@ -5,19 +5,43 @@
 #include <cstdlib>
 #include "sshuitls.h"
 using namespace std;
-int main()
+int main(int argc, char** argv)
 {
 
-	sshutils p;
 
-	string host;
-	string ip;
-	string name;
 
-	system("ssh dev@192.168.2.170");
-	p.setSSH("192.178.2.1", "mosespc", "homepc");
+	sshutils util;
 
-	p.callSSH();
+
+	string mainarg;
+
+	mainarg = argv[1];
+
+
+	if (mainarg == "cr"){
+		util.callCreateSSH();
+	}else if (mainarg == "cr"){
+
+	}
+
+
+	util.setArgs(argv[1], argv[2], argv[3]);
+
+	util.callSSH();
+
+
+
+
+	// sshutils p;
+
+	// string host;
+	// string ip;
+	// string name;
+
+	// system("ssh dev@192.168.2.170");
+	// p.setSSH("192.178.2.1", "mosespc", "homepc");
+
+	// p.callSSH();
 
 
 
