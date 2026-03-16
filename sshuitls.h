@@ -2,23 +2,25 @@
 #include <string>
 using namespace std;
 class sshutils {
+
 public:
 
 
-	string arg1;
-	string arg2;
-	string arg3;
+	string home;
+	string basepath;
 
-	string ip;
-	string host;
-	string name;
+	void callEasySSH();
 
 
-	void callSSH();
+	sshutils();
+	
 
-	void setArgs(string arg1, string arg2, string arg3);
-	void setSSH(string ip, string host, string name);
+	void test();
+	void callOpenSSH(string name);
+	void callCreateSSH(string host, string ip, string name);
+
 private:
+
 
 
 
