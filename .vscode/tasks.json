@@ -1,0 +1,30 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "build easyssh (g++-9)",
+			"command": "/usr/bin/g++-9",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-std=c++17",
+				"-g",
+				"${workspaceFolder}/src/easyssh.cpp",
+				"${workspaceFolder}/src/sshuitls.cpp",
+				"-o",
+				"${workspaceFolder}/src/easyssh"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: /usr/bin/g++-9"
+		}
+	]
+}
